@@ -6,7 +6,7 @@
 #'@param data .csv file as a data frame
 #'@param col1 numerical column of measurement that needs converting 
 #'@return meters The same measurement as a meter (numeric) 
-#' 
+#'
 #'@export 
 
 mm_m_unit_change<-function(data,col1){
@@ -17,4 +17,4 @@ mm_m_unit_change<-function(data,col1){
   return(clean)
 }
 #Some of the biggest crabs in the world are meters long.
-#This function changes the current unit of measurements, millimeters, to meters.
+#This function changes the current unit of measurements, millimeters, to meters. 
