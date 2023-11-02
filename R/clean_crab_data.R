@@ -7,6 +7,7 @@
 #'@return data A data frame that will have to be saved as a new data frame (numeric) 
 #' 
 #'@export
+#'
 clean_crabs_data<-function(data){
   data_new<-na.omit(data)
   return(data_new)

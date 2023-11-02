@@ -9,6 +9,7 @@
 #'@return area Value from column 1 multiplied by column 2 (numeric) 
 #' 
 #'@export
+#'
 plot_crabs<-function(data,x,y){
   graph<-ggplot({{data}},aes({{x}},{{y}}))+geom_point()
   return(graph)
