@@ -1,0 +1,16 @@
+Package: rsavario.pkg
+Title: An R package for processing crab data
+Version: 0.1
+Authors@R: c(
+  person(given = "Ethan",
+          family = "Savario",
+          role = c("cre", "aut"),
+          email = "ethan.savario@selu.edu")
+          )
+Description: An R package to process plant data. Most functions accept numerical input and allow users to calculate a variety of summary statistics to understand plants in their ecosystems. Users can use this to calculate popular and widely-used stats such as whatever, this and that, and some other stuff.
+License: MIT + file LICENSE
+Depends:
+  R (>= 2.10)
+Imports:
+  tidyverse, broom
+RoxygenNote: 7.1.1

@@ -1,0 +1,32 @@
+---
+title: "CrabTutorial"
+author: "Ethan Savario"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is an R package that focuses on manipulating crab data such as carapce measurements,
+latitude found, and color. This package contains functions that allow the user to omit missing values in data, manipulate units of measurement,calculate the carapace area of an object, to create a linear model and plot the linear model on a point graph. 
+Crabbers, fishers, and researchers may be interested in this package and in being able to 
+graph data regarding crabs, find the relationship between characteristics of a 
+crab, and quickly compare measurements using one uniform unit of measurement.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
