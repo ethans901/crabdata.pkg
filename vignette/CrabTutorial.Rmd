@@ -15,10 +15,12 @@ Crabbers, fishers, and researchers may be interested in this package and in bein
 graph data regarding crabs, find the relationship between characteristics of a 
 crab, and quickly compare measurements using one uniform unit of measurement.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Below is some sample data reguarding crabs that can be used. This will be downloaded from google sheets:
 
-```{r cars}
-summary(cars)
+```{r}
+library(googlesheets4)
+googlesheets4::gs4_deauth()
+crab_data<-read_sheet("https://docs.google.com/spreadsheets/d/11Y6t82BBL3vbL5yCoX7OsbPcvVO4UWc6VrOQDqKOnBI/edit?usp=sharing")
 ```
 
 ## Including Plots
