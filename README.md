@@ -1,4 +1,4 @@
-# savario.pkg
+# rsavario.pkg
 
 ## An R package for processing crab data
 
@@ -8,4 +8,4 @@ units of measurement,calculate the carapace area of an object, to create a
 linear model and plot the linear model on a point graph. 
 Crabbers, fishers, and researchers may be interested in this package and in being able to 
 graph data regarding crabs, find the relationship between characteristics of a 
-crab, and quickly compare measurements using one uniform unit of measurement.
+crab, and quickly compare measurements using one uniform unit of measurement. test for push, thanks.
