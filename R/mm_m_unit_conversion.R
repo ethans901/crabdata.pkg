@@ -11,11 +11,23 @@
 #'
 
 mm_m_unit_change<-function(data,col1){
-  clean<-data %>% 
+  mm<-data %>% 
     na.omit(data) %>%
-    mutate(length_conv = {{col1}}/1000) %>% 
-    select(length_conv,{{col1}})
-  return(clean)
+    mutate(length_mm = {{col1}}/1000) %>% 
+    select(length_mm)
+  cm<-data %>% 
+    na.omit(data) %>% 
+    mutate(length_cm={{col1}}/100) %>% 
+    select(length_cm)
+  dm<-data %>% 
+    na.omit(data) %>% 
+    mutate(length_dm={{col1}}/10) %>% 
+    select(length_dm)
+  m<-data %>% 
+    na.omit(data) %>% 
+    mutate(length={{col1}}/1) %>% 
+    select(length)
+  list<-c(mm,cm,dm,m)
+  return(list)
 }
-#Some of the biggest crabs in the world are meters long.
-#This function changes the current unit of measurements, millimeters, to meters. 
+#mm_m_unit_con_2.0<-function(data,mm,cm,dm,m){
