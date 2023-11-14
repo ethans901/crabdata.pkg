@@ -13,6 +13,21 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/clean_crabs_data.html</loc>
+  </url>
+  <url>
+    <loc>/reference/crab_area.html</loc>
+  </url>
+  <url>
+    <loc>/reference/graph_crabs.html</loc>
+  </url>
+  <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/mm_m_unit_change.html</loc>
+  </url>
+  <url>
+    <loc>/reference/plot_crabs.html</loc>
   </url>
 </urlset>
