@@ -13,22 +13,21 @@
 mm_m_unit_change<-function(data,col1){
   mm<-data %>% 
     na.omit(data) %>%
-    mutate(length_mm = {{col1}}/1000) %>% 
-    select(length_mm)
+    mutate(mes_mm = {{col1}}/1) %>% 
+    select(mes_mm)
   cm<-data %>% 
     na.omit(data) %>% 
-    mutate(length_cm={{col1}}/100) %>% 
-    select(length_cm)
+    mutate(mes_cm={{col1}}/10) %>% 
+    select(mes_cm)
   dm<-data %>% 
     na.omit(data) %>% 
-    mutate(length_dm={{col1}}/10) %>% 
-    select(length_dm)
+    mutate(mes_dm={{col1}}/100) %>% 
+    select(mes_dm)
   m<-data %>% 
     na.omit(data) %>% 
-    mutate(length={{col1}}/1) %>% 
-    select(length)
+    mutate(mes_m={{col1}}/1000) %>% 
+    select(mes_m)
   list<-c(mm,cm,dm,m)
   return(list)
 }
-#mm_m_unit_con_2.0<-function(data,mm,cm,dm,m){
-#did it push
+#currnetly it works for the four columns, would like to improve and add columns to a table maybe???
