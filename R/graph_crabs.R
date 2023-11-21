@@ -11,9 +11,8 @@
 #'@export
 #'
 
-graph_crabs<-function(data,x,y){
-  data %>% 
-  graph<-ggplot({{data}},aes({{x}},{{y}}))+geom_point()
+graph_crabs<-function(df,x,y){
+  graph<-ggplot(data=df,mapping=aes({{x}},{{y}}))+geom_point()
   return(graph)
 }
 

@@ -10,13 +10,12 @@
 #' 
 #'@export
 
-plot_crabs<-function(data, dependent, independent_cols ){
-  check<-data %>% 
+plot_crabs<-function(df, dependent, independent_cols ){
+  check<-df %>% 
     select({{dependent}})
   if(is.character(check)==FALSE){
-      return_summary <- data %>%
-        select(a = as.name({{dependent}}), starts_with({{independent_cols}})) %>%
-        lm(a ~ ., data = .) %>%
+      return_summary <-
+        lm({{dependent}}~{{independent_cols}},data=df) %>%
         summary()
       return(return_summary)
     } else {
