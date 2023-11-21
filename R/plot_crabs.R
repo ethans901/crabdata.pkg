@@ -10,21 +10,20 @@
 #' 
 #'@export
 
-plot_crabs<-function(df, dependent, independent_cols ){
-  check<-df %>% 
-    select({{dependent}})
-  if(is.character(check)==FALSE){
-      return_summary <-
-        lm({{dependent}}~{{independent_cols}},data=df) %>%
-        summary()
-      return(return_summary)
-    } else {
-      print("Response not numeric, not appropriate for LM")
-    }
+plot_crab<-function(df, dependent, independent_cols ){
+  if(is.numeric({{df[[dependent]]}}))  {
+    return_summary <- df %>%
+      select(a = quo_name(dependent), starts_with(independent_cols)) %>%
+      lm(a ~ ., data = .) %>%
+      summary()
+    return(return_summary)
+  } else {
+    print("Response not numeric, not appropriate for LM")
+  }
   
 }
 
-#This function is to calculate and a linear model and provide a summary of the model. 
+ #This function is to calculate and a linear model and provide a summary of the model. 
 #This allows us to see if two variable in a data set are related linearly.
 #(For example, in the crabs data set, this function was used to determine if color and Latitude were related.)
 #Would it be possible to make an "if-then" to denote between a lm and an anova 
