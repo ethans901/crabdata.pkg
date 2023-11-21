@@ -18,6 +18,7 @@ crab, and quickly compare measurements using one uniform unit of measurement.
 Below is some sample data reguarding crabs that can be used. This will be downloaded from google sheets:
 
 ```{r}
+#install.packages("googlesheets4")
 library(googlesheets4)
 googlesheets4::gs4_deauth()
 crab_data<-read_sheet("https://docs.google.com/spreadsheets/d/11Y6t82BBL3vbL5yCoX7OsbPcvVO4UWc6VrOQDqKOnBI/edit?usp=sharing")
