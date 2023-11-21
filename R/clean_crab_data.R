@@ -8,10 +8,14 @@
 #' 
 #'@export
 #'
-
 clean_crabs_data<-function(data){
-  data_new<-na.omit(data)
-  return(data_new)
- }
+  check<-data %>% 
+    select(rear_width,body_depth)
+    if(sum(check)>0)
+    {data_new<-drop_na({{data}})
+    return(data_new)}else{
+      print("NAs seem to be present")
+    }
+}
 #This function is to clean up a data set are remove any possible NA values present.
 

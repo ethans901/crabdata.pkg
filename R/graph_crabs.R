@@ -12,6 +12,7 @@
 #'
 
 graph_crabs<-function(data,x,y){
+  data %>% 
   graph<-ggplot({{data}},aes({{x}},{{y}}))+geom_point()
   return(graph)
 }

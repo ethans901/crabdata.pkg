@@ -10,11 +10,21 @@
 #' 
 #'@export
 
-plot_crabs<-function(data,col_dep,col_indep){
-  line<-(lm({{col_dep}}~{{col_indep}},{{data}})) %>% 
-    summary()
-  return(line)
+plot_crabs<-function(data, dependent, independent_cols ){
+  check<-data %>% 
+    select({{dependent}})
+  if(is.character(check)==FALSE){
+      return_summary <- data %>%
+        select(a = as.name({{dependent}}), starts_with({{independent_cols}})) %>%
+        lm(a ~ ., data = .) %>%
+        summary()
+      return(return_summary)
+    } else {
+      print("Response not numeric, not appropriate for LM")
+    }
+  
 }
+
 #This function is to calculate and a linear model and provide a summary of the model. 
 #This allows us to see if two variable in a data set are related linearly.
 #(For example, in the crabs data set, this function was used to determine if color and Latitude were related.)

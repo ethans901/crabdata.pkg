@@ -11,6 +11,9 @@
 #'
 
 mm_m_unit_change<-function(data,col1){
+  check<-data %>% 
+    select({{col1}})
+  if(sum(check)>0){
   mm<-data %>% 
     na.omit(data) %>%
     mutate(mes_mm = {{col1}}/1) %>% 
@@ -28,6 +31,8 @@ mm_m_unit_change<-function(data,col1){
     mutate(mes_m={{col1}}/1000) %>% 
     select(mes_m)
   list<-c(mm,cm,dm,m)
-  return(list)
+  return(list)}else{
+    print("Those are not numbers")
+  }
 }
 #currnetly it works for the four columns, would like to improve and add columns to a table maybe???
