@@ -4,7 +4,7 @@
 \alias{plot_crabs}
 \title{Measures area of carapace}
 \usage{
-plot_crabs(data, col_dep, col_indep)
+plot_crabs(df, dependent, independent_cols)
 }
 \arguments{
 \item{data}{.csv file as a data frame}

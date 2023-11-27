@@ -4,7 +4,7 @@
 \alias{graph_crabs}
 \title{Plots a point graph}
 \usage{
-graph_crabs(data, x, y)
+graph_crabs(df, x, y)
 }
 \arguments{
 \item{data}{.csv file as a data frame}
