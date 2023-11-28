@@ -10,7 +10,7 @@
 #' 
 #'@export
 
-plot_crab<-function(df, dependent, independent_cols ){
+plot_crabs<-function(df, dependent, independent_cols ){
   if(is.numeric({{df[[dependent]]}}))  {
     return_summary <- df %>%
       select(a = quo_name(dependent), starts_with(independent_cols)) %>%
