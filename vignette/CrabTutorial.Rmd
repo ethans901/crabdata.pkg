@@ -24,7 +24,6 @@ googlesheets4::gs4_deauth()
 crab_data<-read_sheet("https://docs.google.com/spreadsheets/d/11Y6t82BBL3vbL5yCoX7OsbPcvVO4UWc6VrOQDqKOnBI/edit?usp=sharing")
 ```
 
-## Including Plots
 
 You can also embed plots, for example:
 
@@ -32,4 +31,4 @@ You can also embed plots, for example:
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
