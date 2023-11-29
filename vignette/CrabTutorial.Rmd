@@ -23,12 +23,49 @@ library(googlesheets4)
 googlesheets4::gs4_deauth()
 crab_data<-read_sheet("https://docs.google.com/spreadsheets/d/11Y6t82BBL3vbL5yCoX7OsbPcvVO4UWc6VrOQDqKOnBI/edit?usp=sharing")
 ```
+In order to down load the package use this command:
+```{r pressure, echo=FALSE}
+devtools::install_github("ethans901/crabdata.pkg")
+```
 
+Function 1: Cleaning Crab Data 
 
-You can also embed plots, for example:
+This function takes a data set and "cleans it up" by dropping any possible NA values present. We will be using the crabs data set as an example. 
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+clean_crabs_data(crabs)
+```
+
+Function 2: Calculating Crab Area
+
+This function takes a data set and two numeric columns and multiplies the values to make a new column. It was made with the purpose to multiply carapace length and width together to find the area of the crab, BUT you can use it to multiply any two cumeric columns of data.  
+
+```{r pressure, echo=FALSE}
+crab_area(crabs,carapace_length,carapace_width)
+```
+
+Function 3: Plotting a Linear Model
+
+This function takes a data set, a column of dependent variables, and a column of independent variables. calculate and a linear model and provide a summary of the model. This allows us to see if two variable in a data set are related linearly. And remember to use quotes!
+
+```{r pressure, echo=FALSE}
+plot_crab(crabs,"carapace_length","Latitude")
+```
+
+Function 4: Graphing Characteristics 
+
+This function is to plot a scatter plot graph of two columns in a data set. This function takes the data set, independent variable, followed by the dependent variable.
+
+```{r pressure, echo=FALSE}
+graph_crabs(crabs,Latitude,carapace_width)
+```
+
+Function 5: Unit Conversion of Measurements 
+
+Some of the smallest crabs in the world are only millimeters long while other crabs can be meters long. This function will take a measurement in millimeters and convert them to meters. They will also convert measurements to centimeters and decimeters. 
+
+```{r pressure, echo=FALSE}
+mm_m_unit_change(crabs,carapace_length)
 ```
 
 
