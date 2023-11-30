@@ -13,7 +13,7 @@
 crab_area<-function(data,column1,column2){
   columns <- data %>% 
     select({{column1}}, {{column2}})  
-  if(sum(columns) > 0 ){
+  if(sum(columns) >0){
   return<-data %>% 
     mutate(new_col={{column1}}*{{column2}})
     select(new_col,{{column1}},{{column2}})
